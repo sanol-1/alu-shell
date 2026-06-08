@@ -1,6 +1,2 @@
 #!/bin/bash
-cat -n /etc/passwd | while read num line; do
-  case "$line" in
-    *root*) echo "$line" ;;
-  esac
-done
+grep -A 3 "root" /etc/passwd
