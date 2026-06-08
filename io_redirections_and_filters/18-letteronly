@@ -1,7 +1,2 @@
 #!/bin/bash
-cat /etc/ssh/sshd_config | while read line; do
-  case "$line" in
-    [a-zA-Z]*) echo "$line" ;;
-  esac
-done
-
+cat /etc/ssh/sshd_config | while read line; do case "$line" in [a-zA-Z]*) echo "$line" ;; esac done
