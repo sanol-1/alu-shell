@@ -1,7 +1,2 @@
 #!/bin/bash
-cat /etc/passwd | while read line; do
-  case "$line" in
-    *bin*) ;;
-    *) echo "$line" ;;
-  esac
-done
+grep -v "bin" /etc/passwd
